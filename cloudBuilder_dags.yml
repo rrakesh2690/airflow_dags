@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone', 'https://source.developers.google.com/p/aaa-shared-integtoolspreprod/r/dw_dag']
+- name: 'gcr.io/cloud-builders/gsutil'
+  args: ['cp', '-r', './', 'gs://us-central1-preprod-airflow-61442344-bucket/dags/']
+
